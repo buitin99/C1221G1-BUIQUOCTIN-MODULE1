@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="t1">
+            </td>
+            <td>
+                <button onclick="tinhNgay()" >Tính số ngày</button>
+            </td>
+        </tr>
+        <tr>
+
+        </tr>
+        <tr>
+            <td><p>và</p></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="t2">
+            </td>
+            <td>
+                <button onclick="tinhNgay2()">Tính số ngày</button>
+            </td>
+
+        </tr>
+
+    </table>
+    <script>
+
+        function tinhNgay(){
+        let month = parseInt(document.getElementById("t1").value);
+
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+             case 12:
+             {
+                 alert("Tháng này có 31 ngày!");
+             }
+             break
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+            {
+                alert("Tháng này có 30 ngày!")
+            }
+            break
+            case 2:
+            {
+                alert("Tháng này có 28 hoặc 29 ngày!")
+            }
+        }
+        }
+
+        function tinhNgay2(){
+            let thang = parseInt(document.getElementById("t2").value);
+
+            switch (thang) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                {
+                    alert("Tháng này có 31 ngày!");
+                }
+                    break
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                {
+                    alert("Tháng này có 30 ngày!")
+                }
+                    break
+                case 2:
+                {
+                    alert("Tháng này có 28 hoặc 29 ngày!")
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
