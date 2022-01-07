@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    /*
+   Với các bậc thuế như sau:
+   Bậc 1: 4 triệu đồng/tháng 2%;
+   Bậc 2: Trên 4 - 6 triệu đồng/tháng: 5%;
+   Bậc 3: Trên 6 - 9 triệu đồng: 10%;
+   Bậc 4: Trên 9 - 14 triệu đồng/tháng: 15%;
+   Bậc 5: trên 14 triệu đồng 20%;
+
+   */
+        let tien = parseFloat(prompt("Nhập tiền lương của bạn theo đơn vị triệu:"));
+        let soTien;
+
+        let bac1 = 0.02;
+        let bac2 = 0.05;
+        let bac3 = 0.1;
+        let bac4 = 0.15;
+        let bac5 = 0.2;
+
+
+
+    if (tien> 0 && tien <= 4000000){
+        soTien = tien - (tien*bac1);
+        alert("Giá tiền sau khi tính thuế là: " + soTien);
+    }else if (tien <= 6000000){
+        soTien = tien - ((4000000*bac1) + ((tien - 4000000)*bac2));
+        alert("Giá tiền sau khi tính thuế là: " + soTien);
+    }else if (tien <= 9000000){
+        soTien = tien - (((4000000*bac1) + (2000000*bac2)) + ((tien - 6000000)*bac3));
+        alert("Giá tiền sau khi tính thuế là: " + soTien);
+    }else if (tien <= 14000000){
+        soTien = tien - ((((4000000*bac1) + (2000000*bac2) + (3000000*bac3)) + ((tien - 9000000)*bac4)));
+        alert("Giá tiền sau khi tính thuế là: " + soTien);}
+    else{
+        soTien = tien - ((((4000000*bac1) + (2000000*bac2) + (3000000*bac3) + (5000000*bac4)) - ((tien - 14000000)*bac5)));
+        alert("Giá tiền sau khi tính thuế là: " + soTien);}
+
+
+
+
+</script>
+</body>
+</html>

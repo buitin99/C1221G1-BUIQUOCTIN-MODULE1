@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <script>
+
+        let diemGiuaKy = parseFloat(prompt("Nhập điểm giữa kỳ:"));
+        let diemCuoiKy = parseFloat(prompt("Nhập điểm Cuối kỳ:"));
+
+        let diem = ((diemGiuaKy*0.3) + (diemCuoiKy*0.7));
+
+        if (diem >= 8.5) {
+            alert("Bạn xếp hạng loại A!");
+        }else if (diem >= 7.0) {
+            alert("Bạn xếp hạng loại B!");
+        }else if (diem >= 6.9) {
+            alert("Bạn xếp hạng loại C!");
+        }else if (diem >= 5.4) {
+            alert("Bạn xếp hạng loại D!");
+        }else
+        {
+            alert("Bạn xếp hạng loại F!");
+        }
+
+
+
+    </script>
+</body>
+</html>

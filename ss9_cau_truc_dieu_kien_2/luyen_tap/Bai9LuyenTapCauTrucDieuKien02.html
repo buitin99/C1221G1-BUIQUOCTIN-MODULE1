@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        let a = parseFloat(prompt("nhập cạnh của tam giác:"));
+        let b = parseFloat(prompt("nhập cạnh của tam giác:"));
+        let c = parseFloat(prompt("nhập cạnh của tam giác:"));
+
+        if ((a>0) && (b>0) && (c>0))
+        {
+            if((a+b>c) && (b+c>a) && (a+c>b)){
+                alert("Đây là một hình tam giác:");
+            }else
+            {
+                alert("Đây không phải là một hình tam giác:");
+            }
+        }else
+        {
+            alert("Đây không phải là một hình tam giác:");
+        }
+    </script>
+</body>
+</html>

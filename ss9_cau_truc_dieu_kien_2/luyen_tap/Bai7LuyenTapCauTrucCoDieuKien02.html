@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<script>
+    let a = parseFloat(prompt("Nhập hệ số a của phương trình bậc 2:"));
+    let b = parseFloat(prompt("Nhập hệ số b của phương trình bậc 2:"));
+    let c = parseFloat(prompt("Nhập hệ số c của phương trình bậc 2:"));
+    let delta = (b*b) - 4*(a*c);
+
+    let x1;
+    let x2;
+    let canBac2 = Math.sqrt(delta);
+
+if (a>0){
+    if (delta >0) {
+            x1 = (-b + canBac2) / (2 * a);
+            x2 = (-b - canBac2) / (2 * a);
+            alert("Phương trình có 2 nghiệm phân biệt x1 là:" + x1);
+            alert("Phương trình có 2 nghiệm phân biệt x2 là:" + x2);
+    }
+    else if (delta == 0) {
+            x1 = x2 = -b / (2 * a);
+            alert("Phương trình có 2 nghiệm kép x1 = x2 = " + x2);
+    }
+    else
+    {
+            alert("Phương trình vô nghiệm!");
+    }
+}else if (a==0) {
+    if ((b > 0 && c > 0) || (b > 0 && c < 0) || (b < 0 && c > 0) || (b < 0 && c < 0)) {
+        x = -c / b;
+        alert("Nghiệm của phương trình là: " + x);
+    } else if (c == 0) {
+        x = 0;
+        alert("Nghiệm của phương trình là: " + x);
+    }
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let kWH = parseFloat(prompt("Nhập số kWh mà bạn tiêu thụ đơn vị kWh:"));
+    let soTien;
+    let bac1 = 1.678;
+    let bac2 = 1.734;
+    let bac3 = 2.014;
+    let bac4 = 2.536;
+    let bac5 = 2.834;
+    let bac6 = 2.927;
+    if (kWH > 0 && kWH <= 50){
+        soTien = kWH*bac1;
+        alert("Giá tiền điện mà ban phải trả là: " + soTien);
+    }else if (kWH <= 100){
+        soTien = ((50*bac1) + (kWH - 50)*bac2);
+        alert("Giá tiền điện mà ban phải trả là: " + soTien);
+    }else if (kWH <= 200){
+        soTien = (((50*bac1) + (50*bac2)) + ((kWH-100)*bac3));
+        alert("Giá tiền điện mà ban phải trả là: " + soTien);
+    }else if (kWH <= 300){
+        soTien = (((50*bac1) + (50*bac2) + (100*bac3)) + ((kWH - 200)*bac4));
+        alert("Giá tiền điện mà ban phải trả là: " + soTien);}
+    else if (kWH <= 400){
+            soTien = (((50*bac1) + (50*bac2) + (100*bac3) +  (100*bac4)) + ((kWH-300)*bac5));
+            alert("Giá tiền điện mà ban phải trả là: " + soTien);}
+    else{
+        soTien = (((50*bac1) + (50*bac2) + (100*bac3) +  (100*bac4) + (100)*bac5) + (kWH-400)*bac6);
+        alert("Giá tiền điện mà ban phải trả là: " + soTien);
+    }
+
+</script>
+
+</body>
+</html>

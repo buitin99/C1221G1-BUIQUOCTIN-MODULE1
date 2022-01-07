@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soPhut=parseFloat(prompt('Nhập số phút:'))
+    let cuoc;
+    let cuocCoDinh = 50;
+    let soTien;
+    if(soPhut>300){
+        cuoc = (soPhut-300)*300+150*400+50*600;
+    }
+    else if(soPhut>400){
+        cuoc = (soPhut-400)*400+50*600
+    }
+    else{
+        cuoc = soPhut*800;
+    }
+    soTien=0.02*cuoc+cuocCoDinh;
+    alert("số tiền phải trả"+soTien)
+</script>
+</body>
+</html>
