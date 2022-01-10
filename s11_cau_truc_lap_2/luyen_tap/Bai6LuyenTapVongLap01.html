@@ -7,20 +7,26 @@
 <body>
 
     <script>
-        let sum;
+        let sum = 0;
 
         let n = 1;
+        let i = 0;
 
-        for (let count = 0; count < 30; count++ ){
-            if(n % 7 === 0){
-                sum = n + 7;
+        for (let count = 0; count < 30 ; ){
+
+            if ((n%7)==0){
+              i = i + n;
+              sum = sum + i;
+              count++;
+
+        }else
+            {
                 n++;
+            }
         }
-        else
-        {
-            n++;
-        }}
-        alert(sum);
+        alert("Tổng 30 số chia hết cho 7 là" + sum);
     </script>
+
+
 </body>
 </html>

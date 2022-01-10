@@ -3,38 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-
-        div{
-            margin-left: 400px;
-        }
-        h1{ margin-left: 100px;
-
-        }
-    </style>
 </head>
 <body>
-    <div>
-    <h1> BẢNG CỬU CHƯƠNG</h1>
-    <script>
-        let m = 1;
-        let cuuChuong;
-            cuuChuong = "<table border='1' width='300'>"
-        for ( let i = 1; i <= 10; i++){
-            cuuChuong = cuuChuong + "<tr>";
-            for ( let j = 1; j <= 10; j++){
-                if (j === 1){
-                    continue;
-                }
-                cuuChuong = cuuChuong + "<td>" + j +'x'+ m +'='+ m*j + "</td>";
-            }
-            cuuChuong = cuuChuong + "</tr>"; m = m +1;
+<p style="text-align: center"><b>BẢNG CỬU CHƯƠNG</b></p>
+<p id="display"></p>
+<script>
+
+    let tableString = '<table border="1">';
+    for (let i =1 ;i<10;i++){
+        tableString +='<tr>';
+        for (let j =1;j<10;j++){
+            tableString +='<td>'+ j + 'X' + i+ "=" +(i*j) +'</td>';
         }
-        cuuChuong= cuuChuong+"</table>";
-        document.write(cuuChuong);
-
-    </script>
-    </div>
-
+        tableString+= '</tr>';
+    }
+    tableString+='</table>';
+    document.getElementById("display").innerHTML=tableString;
+</script>
 </body>
 </html>

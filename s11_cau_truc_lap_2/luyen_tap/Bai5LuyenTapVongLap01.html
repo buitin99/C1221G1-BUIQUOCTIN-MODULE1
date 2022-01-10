@@ -9,19 +9,15 @@
 <script>
 
 
-    let f0 = 0, f1 = 1, fn;
-    let sum;
+    let f0 = 0, f1 = 1, fn = 0;
+    let sum = 0;
     for(let i = 0; i < 20; i++){
-        fn = f0+f1;
-        f0=f1;
-        f1=fn;
-        sum = f1+fn;
-        document.write(sum);
-        document.write("<br>");
-    }
-
-
-
+            fn = f0+f1;
+            sum = sum +fn;
+            f0=f1;
+            f1=fn;
+        }
+        document.write("Tổng 20 số đầu của dãy fibonacci là:" + sum );
 
 </script>
 </body>
