@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="hinh1" src="c1.png" onclick="doiHinh(1)">
+<img id="hinh2" src="h2.png" onclick="doiHinh(2)">
+<img id="hinh3" src="s3.png" onclick="doiHinh(3)">
+
+
+<script>
+
+    let objHinh1 = document.getElementById("hinh1");
+    let objHinh2 = document.getElementById("hinh2");
+    let objHinh3 = document.getElementById("hinh3");
+    function doiHinh(hinh) {
+        switch (hinh) {
+            case 1:
+                if (objHinh1.getAttribute('src')==='c1.png'){
+                    objHinh1.src="h1.png";
+                }else if (objHinh1.getAttribute('src')==='h1.png'){
+                    objHinh1.src="s1.png";
+                }else {
+                    objHinh1.src="c1.png";
+                }
+                break;
+            case 2:
+                if (objHinh2.getAttribute('src')==='c2.png'){
+                    objHinh2.src="h2.png";
+                }else if (objHinh2.getAttribute('src')==='h2.png'){
+                    objHinh2.src="s2.png";
+                }else {
+                    objHinh2.src="c2.png";
+                }
+                break;
+            case 3:
+                if (objHinh3.getAttribute('src')==='c3.png'){
+                    objHinh3.src="h3.png";
+                }else if (objHinh3.getAttribute('src')==='h3.png'){
+                    objHinh3.src="s3.png";
+                }else {
+                    objHinh3.src="c3.png";
+                }
+                break;
+        }
+        checkWin();
+    }
+    function checkWin() {
+        if (objHinh1.getAttribute('src')==='c1.png'&&objHinh2.getAttribute('src')==='c2.png'&& objHinh3.getAttribute('src')==='c3.png')
+			{
+            objHinh1.style.border='solid 5px red';
+            objHinh2.style.border='solid 5px red';
+            objHinh3.style.border='solid 5px red';
+        }else if(objHinh1.getAttribute('src')==='h1.png'&&objHinh2.getAttribute('src')==='h2.png'&&
+            objHinh3.getAttribute('src')==='h3.png'){
+            objHinh1.style.border='solid 5px red';
+            objHinh2.style.border='solid 5px red';
+            objHinh3.style.border='solid 5px red';
+        }else if(objHinh1.getAttribute('src')==='s1.png'&&objHinh2.getAttribute('src')==='s2.png'&&
+            objHinh3.getAttribute('src')==='s3.png'){
+            objHinh1.style.border='solid 5px red';
+            objHinh2.style.border='solid 5px red';
+            objHinh3.style.border='solid 5px red';
+        }else {
+            objHinh1.style.border='solid 5px white';
+            objHinh2.style.border='solid 5px white';
+            objHinh3.style.border='solid 5px white';
+        }
+    }
+</script>
+</body>
+</html>

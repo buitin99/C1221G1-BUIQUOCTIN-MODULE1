@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    let f0 = 0, f1 = 1, fn;
+    let sum;
+    for(let i = 0; i < 20; i++){
+        fn = f0+f1;
+        f0=f1;
+        f1=fn;
+        sum = f1+fn;
+        document.write(sum);
+        document.write("<br>");
+    }
+
+
+
+
+</script>
+</body>
+</html>

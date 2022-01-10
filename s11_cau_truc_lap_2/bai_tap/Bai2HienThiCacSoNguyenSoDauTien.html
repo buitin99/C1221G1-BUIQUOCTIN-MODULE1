@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <script>
+
+        let number = parseInt(prompt("nhập vào số lượng số nguyên tố cần in ra:"));
+        let count = 0;
+        if (number >2){
+            for (let n = 2;count < number;n++){
+               if((n%2 !== 0 && n%3 !== 0) || (n==2 || n==3))  {
+                   alert("Số nguyên tố là:" +n);
+                   count++;
+               }
+            }
+        }else
+        {
+            alert("Số nguyên tố là các số lớn hơn 2. Vui lòng nhập lớn hơn 2!");
+        }
+
+
+        // for(let n = 2;count < number; n++){
+        //     if(n%1==0 && n%n==0){
+        //     alert("Số nguyên tố là:" + n);
+        //     count++;
+        // }
+        // }
+
+
+
+    </script>
+</body>
+</html>
