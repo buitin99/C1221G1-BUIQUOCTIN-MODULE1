@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let nhapSo = parseInt(prompt("Nhập số muốn in ra của dãy Fibonaci;"));
+
+    let fn;
+    let f0 = 0;
+    let f1 = 1;
+    let count = 0;
+
+    while (nhapSo !== count){
+        fn = f1 + f0;
+        f0 = f1;
+        f1= fn;
+        count++;
+        document.write(fn);
+        document.write("<br>");
+    }
+
+</script>
+</body>
+</html>

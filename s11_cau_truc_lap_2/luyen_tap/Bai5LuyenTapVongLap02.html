@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let tien = parseFloat(prompt('Nhập số tiền bạn gửi!:'));
+    let laiSuat = parseFloat(prompt('Nhập lãi suất từ ngân hàng!:'));
+    let thoiGian = parseInt(prompt('Nhập thời hạn gửi!:'));
+    let tienLai;
+    let x;
+    for(x=0;x<thoiGian;x++){
+        tienLai = tien+(tien*laiSuat);
+        tien = tienLai;
+    }
+    alert("Tổng số tiền nhận được là:" + tienLai);
+</script>
+</body>
+</html>

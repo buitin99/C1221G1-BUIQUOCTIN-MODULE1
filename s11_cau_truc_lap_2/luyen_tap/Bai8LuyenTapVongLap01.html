@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 
+
+<input type="button" value="chơi" onclick="Play()">
 </body>
+    <script>
+        function Play() {
+            let max = prompt("nhập số lớn nhất:");
+            let min = prompt("nhập số bé nhất:");
+            ngauNhien = Math.floor(Math.random() * (max - min) + min);
+            console.log(ngauNhien);
+            let nhapSo = prompt("Nhập số:");
+
+
+
+                if (nhapSo != ngauNhien) {
+                    if (nhapSo > ngauNhien) {
+                            prompt("lớn nhập lại:");
+                        } else if (nhapSo < ngauNhien) {
+                            prompt("nhỏ nhập lại:");
+                        }
+                        alert("quá 3 lần!");
+
+                else
+                    {
+
+                    alert("đúng");
+                }
+
+            }
+        }
+    </script>
 </html>
