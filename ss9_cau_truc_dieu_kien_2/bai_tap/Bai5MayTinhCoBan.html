@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <table id="table">
+        <tr>
+            <td colspan="5"><input id="ketQuaTinh" type="text"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="btn" value="7" onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="8" onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="9" onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="/" onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="AC" onclick="delet()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="btn" value="4" onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="5" onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="6" onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="*" onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="C" onclick="deleteAll()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="btn" value="1" onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="2" onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="3" onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="+" onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="=" onclick="equal()"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="btn" value="0" onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="." onclick="number(this.value)"></td>
+            <td><input type="button" name="btn" value="-" onclick="number(this.value)"></td>
+        </tr>
+    </table>
+</div>
+<script>
+    function number(number){
+        let  n = document.getElementById("ketQuaTinh").value;
+        document.getElementById("ketQuaTinh").value = n + number;
+    }
+    function equal(){
+        let str=document.getElementById("ketQuaTinh").value;
+        let ketQua=eval(str);
+        document.getElementById("ketQuaTinh").value=ketQua;
+    }
+    function delet(){
+        let del=document.getElementById("ketQuaTinh").value
+        document.getElementById('ketQuaTinh').value=del.substr(0,del.length-1)
+    }
+    function deleteAll(){
+        let delAll=document.getElementById('ketQuaTinh').value;
+        delAll=' ';
+        document.getElementById('ketQuaTinh').value=delAll;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <h1 style="text-align: center"><b>Do You Love Me</b></h1>
+        <button id="co" onclick="dongY()" style="position:absolute; left:500px; top:300px;">Yes</button>
+        <button id="khong" onmouseover="khongDongY()" style="position:absolute; left:800px; top:300px;">No</button>
+<script>
+    function dongY() {
+        alert("<3");
+    }
+    function khongDongY() {
+        let x = Math.round(Math.random() * window.innerWidth);
+        let y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('khong').style.left = x + 'px';
+        document.getElementById('khong').style.top = y + 'px';
+
+    }
+</script>
+</body>
+</html>
