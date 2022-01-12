@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    document.write('<table border="0">');
+    for (let i = 1; i < 4; i++){
+        document.write('<tr>');
+        if (i == 1 || i == 3){
+            document.write('<td>');
+            document.write("*");
+            document.write('</td>');
+            document.write('<td>');
+            document.write("*");
+            document.write('</td>');
+            document.write('<td>');
+            document.write("*");
+            document.write('</td>');
+            document.write('<td>');
+            document.write("*");
+            document.write('</td>');
+            document.write('<td>');
+            document.write("*");
+            document.write('</td>');
+        }
+        else
+        {
+            document.write('<td>');
+            document.write("*");
+            document.write('</td>');
+            document.write('<td>');
+            document.write("&nbsp");
+            document.write('</td>');
+            document.write('<td>');
+            document.write("&nbsp");
+            document.write('</td>');
+            document.write('<td>');
+            document.write("&nbsp");
+            document.write('</td>');
+            document.write('<td>');
+            document.write("*");
+            document.write('</td>');
+        }
+        document.write('</tr>');
+    }
+    document.write('</table>');
+
+</script>
+</body>
+</html>

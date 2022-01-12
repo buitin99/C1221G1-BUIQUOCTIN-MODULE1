@@ -13,27 +13,21 @@
         function Play() {
             let max = prompt("nhập số lớn nhất:");
             let min = prompt("nhập số bé nhất:");
-            ngauNhien = Math.floor(Math.random() * (max - min) + min);
+            ngauNhien = Math.ceil(Math.random() * (max - min + 1) + min);
             console.log(ngauNhien);
             let nhapSo = prompt("Nhập số:");
-
-
-
-                if (nhapSo != ngauNhien) {
-                    if (nhapSo > ngauNhien) {
-                            prompt("lớn nhập lại:");
-                        } else if (nhapSo < ngauNhien) {
-                            prompt("nhỏ nhập lại:");
-                        }
-                        alert("quá 3 lần!");
-
-                else
-                    {
-
-                    alert("đúng");
-                }
-
+        for (let i = 1; i < 3; i++){
+            if (nhapSo == ngauNhien)
+            {
+                alert("win");
+                break;
             }
+            else if (nhapSo > ngauNhien){
+                prompt("lớn nhập lại:");
+            }else if (nhapSo < ngauNhien){
+                prompt("nhỏ nhập lại:");
+            }
+        }alert("play again");
         }
     </script>
 </html>
