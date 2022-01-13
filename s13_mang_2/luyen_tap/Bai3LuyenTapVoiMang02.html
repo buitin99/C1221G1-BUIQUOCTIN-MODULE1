@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let daySo = parseInt(prompt("nhập số phần tử:"));
+    let nhapVao = [];
+    let dem = 0;
+
+
+    for (let i = 0; i < daySo ;i++) {
+        nhapVao[i] = prompt();
+    }
+
+    for (let count = 0; count < nhapVao.length;count++)
+    {
+      if(nhapVao[count]*1 == nhapVao[count]){
+          dem++;
+      }
+    }
+    alert("số ký tự trong một chuỗi là:" + dem);
+
+</script>
+</body>
+</html>

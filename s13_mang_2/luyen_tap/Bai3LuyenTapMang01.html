@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let daySo = parseInt(prompt("nhập số phần tử:"));
+    let numbers = [];
+    let tong = 0;
+    for (let count = 0; count < daySo ;count++) {
+        numbers[count] = parseInt(prompt(""));
+        tong = (tong + numbers[count]);
+    }
+    let trungBinh = (tong)/daySo;
+    let max = Math.max.apply(Math,numbers);
+    alert("trung bình của dãy số là:" + trungBinh);
+    alert("Giá trị lớn nhất là:" + max);
+
+</script>
+
+</body>
+</html>

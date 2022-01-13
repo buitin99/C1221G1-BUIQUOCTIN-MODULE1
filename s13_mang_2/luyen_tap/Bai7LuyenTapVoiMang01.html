@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let daySo = parseInt(prompt("nhập số phần tử:"));
+    let numbers = [];
+
+    for (let count = 0; count < daySo ;count++) {
+        numbers[count] = parseInt(prompt(""));
+    }
+
+    let v = parseInt(prompt("nhập số cần kiểm tra:"));
+    for (let i = 0; i < numbers.length; i++){
+        if (v === numbers[i]){
+            numbers.splice(i,1);
+            numbers.push(0);
+            i--;
+        }
+    }
+    alert(numbers);
+</script>
+</body>
+</html>

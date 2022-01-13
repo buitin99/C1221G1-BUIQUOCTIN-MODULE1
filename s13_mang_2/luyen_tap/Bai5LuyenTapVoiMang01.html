@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let daySo = parseInt(prompt("nhập số phần tử:"));
+    let numbers = [];
+    let dem = 0;
+    for (let count = 0; count < daySo ;count++) {
+        numbers[count] = parseInt(prompt(""));
+        if (numbers[count] < 0){
+            dem++;
+        }
+    }
+    alert("dãy số có" + dem + "nguyên âm" );
+</script>
+</body>
+</html>

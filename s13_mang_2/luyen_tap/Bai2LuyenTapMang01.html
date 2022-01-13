@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        const numbers = [8,9,10,11,12,17,13,14,15,16];
+        let max = numbers[0];
+        let i = 0;
+        for (let count = 0; count < numbers.length ;count++){
+
+            if(numbers[count+1] > max)
+            {
+                max = numbers[count];
+                i = count;
+            }
+        }document.write("số thứ tự là" +  + i + "với giá trị là" +max);
+
+
+</script>
+</body>
+</html>
