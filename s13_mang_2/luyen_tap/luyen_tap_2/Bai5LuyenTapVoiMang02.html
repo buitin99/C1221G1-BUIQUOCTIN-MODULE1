@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let chuoiDauTien  = prompt("nhập chuỗi cần so sánh:");
+    let chuoiTiepTheo = prompt("nhập chuỗi cần so sánh:");
+    let flag = true;
+
+
+    if (chuoiDauTien.length < chuoiTiepTheo.length || chuoiDauTien.length > chuoiTiepTheo.length){
+        flag = false;
+    }
+    else
+    {
+        for (let count = 0; count < chuoiDauTien.length; count++){
+            if(chuoiDauTien[count] === chuoiTiepTheo[count]){
+                flag = true;
+            }
+            else
+            {
+                flag = false;
+            }
+        }
+    }
+    if (flag == true){
+        document.write("Hai số giống nhau!");
+    }else
+    {
+        document.write("Hai số không giống nhau!");
+    }
+
+
+
+</script>
+
+</body>
+</html>

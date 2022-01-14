@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+   let daySo = prompt("nhập số phần tử của dãy:");
+   let numbers = [];
+   let flag = false;
+   for (let count = 0; count< daySo;count++){
+       numbers[count] = parseInt(prompt("nhập vào số nguyên thứ "+ count));
+   }
+   let kiemTra = parseInt(prompt("nhập số V cần kiểm tra:"));
+
+   for(let i = 0; i < numbers.length ;i++){
+       if(numbers[i] == kiemTra){
+           flag = true;
+       }
+   }
+
+   if(flag == true){
+       document.write("Số V có trong mảng");
+   }
+   else
+   {
+       document.write("số V không có trong mảng");
+   }
+
+
+
+</script>
+</body>
+</html>
