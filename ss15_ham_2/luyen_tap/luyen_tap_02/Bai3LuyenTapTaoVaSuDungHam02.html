@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function giaiThua(nhapSo){
+
+    nhapSo = prompt('Nhập số cần tính giai thừa!');
+    let gt = 1;
+        for(let i=1;i <= nhapSo;i++)
+        {
+            gt*=i;
+        }
+        return gt;
+    }
+    let gt = giaiThua();
+    alert('Giai thừa số cần tìm là:' + gt);
+
+
+</script>
+        </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function daoNguoc(array, number) {
+        number = parseInt(prompt('Nhập số của mảng!'));
+        array = [];
+        for (let i = 0; i < number; i++){
+            array[i] = parseInt(prompt('Nhập số!'));
+        }
+        array.reverse();
+        return array;
+    }
+    let chuyenDoi = daoNguoc();
+    alert(chuyenDoi);
+
+</script>
+
+</body>
+</html>

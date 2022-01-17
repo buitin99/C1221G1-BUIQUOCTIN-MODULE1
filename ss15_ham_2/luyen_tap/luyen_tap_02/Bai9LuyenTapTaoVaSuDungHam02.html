@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTra(soKyTu, chuoi) {
+        soKyTu = parseInt(prompt('Nhập vào số ký tự của mảng:'));
+        chuoi = [];
+        let count = 0;
+        for (let i = 0; i < soKyTu; i++){
+            chuoi[i] = prompt('Nhập ký tự thứ' + i + 'của chuỗi');
+        }
+        let kyTu = prompt('Nhập ký tự cần kiểm tra:');
+        let flag = false;
+        for(let i = 0; i < soKyTu; i++) {
+            if (kyTu == chuoi[i]) {
+                count++;
+                flag = true;
+            }
+        }
+
+    return count;
+    }
+
+    let result = kiemTra();
+    if (result == 0){
+        alert('Không có ký tự cần tìm!');
+    }else
+    {
+        alert('Số ký tự trong mảng là' + result);
+    }
+
+
+</script>
+</body>
+</html>

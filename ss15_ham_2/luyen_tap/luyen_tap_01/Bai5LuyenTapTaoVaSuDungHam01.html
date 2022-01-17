@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button onclick="timKiem()">Tìm Kiếm</button>
+<p id="ketQua"></p>
+    <script>
+        function timKiem(ngoiSao, chomSao, word, result) {
+            word = prompt('Nhập tên ngôi sao cần tìm kiếm:');
+            ngoiSao = ['Polaris' , 'Aldebaran' , 'Deneb' , 'Vega' , 'Altair' , 'Dubhe' , 'Regulus'];
+            chomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'leo'];
+            for (let i = 0 ; i < ngoiSao.length; i++){
+                if (word == ngoiSao[i]){
+                    result = chomSao[i];
+                }
+            }
+            document.getElementById("ketQua").innerText = result;
+        }
+
+
+
+    </script>
+</body>
+</html>
