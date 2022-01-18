@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Circle{
+        constructor(radius,color) {
+            this.radius = radius;
+            this.color = color;
+        }
+        Circle(){
+
+        }
+        setRadius(radius){
+            this.radius = radius;
+        }
+        getRadius(){
+            return this.radius;
+        }
+        getArea(){
+            return Math.PI*this.radius*this.radius;
+        }
+    }
+
+    let circle1 = new Circle();
+    circle1.setRadius(prompt('Nhập vào bán kính:'));
+    alert("Bán kính hình tròn là: " + circle1.radius + "  ;Diện tích hình tròn là: " + circle1.getArea());
+</script>
+</body>
+</html>

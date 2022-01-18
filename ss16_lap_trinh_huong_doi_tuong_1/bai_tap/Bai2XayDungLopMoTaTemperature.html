@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(C, F, K) {
+            this.C = C;
+            this.F = F;
+            this.K = K;
+        }
+        setDoC(C){
+            this.C = C;
+        }
+        getDoF(){
+            return (this.C*1.8) + 32;
+        }
+        getDoK(){
+            return this.C+273.15;
+        }
+    }
+    let nhietDo = new Temperature();
+    nhietDo.setDoC(25);
+    alert('Độ F sau khi chuyển đổi là:' + nhietDo.getDoF());
+    alert('Độ F sau khi chuyển đổi là:' + nhietDo.getDoK());
+
+</script>
+</body>
+</html>

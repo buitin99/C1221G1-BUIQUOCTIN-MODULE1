@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500px" height="500px"></canvas>
+<script>
+    class Rectangle{
+        constructor(rong,dai) {
+            this.rong = rong;
+            this.dai = dai;
+        }
+
+        setRong(rong){
+            this.rong = rong;
+        }
+        setDai(dai){
+            this.dai = dai;
+        }
+        getRong(){
+            return this.rong;
+        }
+        getDai(){
+            return this.dai;
+        }
+        getDienTich(){
+            return this.dai*this.rong;
+        }
+        getChuVi(){
+            return (this.dai+this.rong)*2;
+        }
+
+    }
+    let rectangle1 = new Rectangle();
+    rectangle1.setDai(parseInt(prompt('Nhập chiều dài:')));
+    rectangle1.setRong(parseInt(prompt('Nhập chiều rộng:')));
+    alert('Diện tích hình chữ nhật là:' + rectangle1.getDienTich());
+    alert('Chu Vi hình chữ nhật là:' + rectangle1.getChuVi());
+    
+   let canvas = document.getElementById("myCanvas");
+   let hcn = canvas.getContext("2d");
+    hcn.fillStyle='yellow';
+    hcn.fillRect(0,0,rectangle1.rong,rectangle1.dai);
+
+
+</script>
+</body>
+</html>

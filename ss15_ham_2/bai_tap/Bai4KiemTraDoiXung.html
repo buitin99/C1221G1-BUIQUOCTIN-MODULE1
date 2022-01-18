@@ -6,27 +6,59 @@
 </head>
 <body>
 <script>
-    function isPalindrome(s){
-
-        let chuoiDauTien = prompt('nhập vào chuỗi');
-        let chuoiThuHai = prompt('nhập vào chuỗi');
-        let flag = false;
-
-        console.log(chuoiDauTien);
-        console.log(chuoiThuHai);
-
-        if ((chuoiDauTien.length-1)){
-            console.log(chuoiDauTien.length-1);
-            console.log(chuoiThuHai);
-            alert('đúng');
-        }else
-        {
-            alert('sai');
+    function isPalindrome(chuoiDauTien, chuoiThuHai, chuoiTrungGian){
+        chuoiDauTien = prompt('nhập chuỗi đầu tiên!');
+        chuoiThuHai = prompt('nhập chuỗi thứ hai')
+        chuoiTrungGian = chuoiThuHai;
+        let  flag = false;
+        if (chuoiDauTien.length < chuoiThuHai.length || chuoiDauTien.length > chuoiThuHai.length){
+            flag = false;
         }
+        else
+        {
+            for (let i = 0; i < chuoiDauTien.length ; i++)
+            {
+                if (chuoiDauTien[i] == chuoiThuHai[i]){
+                    flag = true;
+                    break;
+                }
+                else
+                {
+                    for(let j = 0; j < chuoiThuHai.length ; j++){
+                        for (let m = chuoiTrungGian.length - 1; m >=0; m--){
+                            chuoiTrungGian[m] = chuoiThuHai[j];
+                            console.log(chuoiTrungGian)
+                        }
+                    }
+                    for (let k = 0; k < chuoiDauTien.length; k++){
+                        if (chuoiDauTien[k] == chuoiTrungGian[k])
+                        {
+                            flag = true;
+                            break;
+                        }
+                        else
+                        {
+                            flag = false;
+                            break;
+                        }
 
+                    }
 
+                }
+            }
+        }
+        return flag;
     }
-isPalindrome();
+let result = isPalindrome();
+
+    if (result == true){
+        alert('Hai chuỗi đối xứng nhau!');
+    }
+    else
+    {
+        alert('Hai chuỗi không đối xứng nhau!');
+    }
 </script>
+
 </body>
 </html>
