@@ -32,17 +32,18 @@
             return (this.dai+this.rong)*2;
         }
 
+
     }
     let rectangle1 = new Rectangle();
     rectangle1.setDai(parseInt(prompt('Nhập chiều dài:')));
     rectangle1.setRong(parseInt(prompt('Nhập chiều rộng:')));
     alert('Diện tích hình chữ nhật là:' + rectangle1.getDienTich());
     alert('Chu Vi hình chữ nhật là:' + rectangle1.getChuVi());
-    
-   let canvas = document.getElementById("myCanvas");
-   let hcn = canvas.getContext("2d");
+    let canvas = document.getElementById("myCanvas");
+    let hcn = canvas.getContext("2d");
     hcn.fillStyle='yellow';
-    hcn.fillRect(0,0,rectangle1.rong,rectangle1.dai);
+    hcn.fillRect(0,0,rectangle1.getRong(),rectangle1.getDai());
+
 
 
 </script>

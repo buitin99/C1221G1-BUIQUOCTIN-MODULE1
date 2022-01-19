@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class SwitchButton{
+        constructor(status,lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+        getStatus() {
+            return this.status;
+        }
+
+        setStatus(status) {
+            this.status = status;
+        }
+
+        getLamp() {
+            return this.lamp;
+        }
+
+        setLamp(lamp) {
+            this.lamp = lamp;
+        }
+
+        connectToLamp(){
+            if(this.status == true){
+                console.log('Đã kết nối với bóng đèn!');
+            }
+            else
+            {
+                console.log('Đã ngắt kết nối với bóng đèn!');
+            }
+        }
+        switchOff(){
+            this.status = false;
+        }
+        switchOn(){
+            this.status = true;
+        }
+    }
+    class ElectricLamp extends SwitchButton{
+        constructor(status) {
+            super(status);
+        }
+        turnOff(){
+            console.log('Bóng đèn tắt!');
+        }
+        turnOn(){
+            console.log('Bóng đèn bật!');
+        }
+    }
+    let bongDen = new ElectricLamp();
+    let congTac = new SwitchButton();
+    congTac.switchOn();
+    console.log(congTac.status);
+    congTac.connectToLamp();
+    bongDen.turnOn();
+    congTac.switchOff();
+    console.log(congTac.status);
+    congTac.connectToLamp();
+    bongDen.turnOff();
+
+
+</script>
+</body>
+</html>
