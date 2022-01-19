@@ -7,10 +7,8 @@
 <body>
 <script>
     class Temperature{
-        constructor(C, F, K) {
+        constructor(C) {
             this.C = C;
-            this.F = F;
-            this.K = K;
         }
         setDoC(C){
             this.C = C;
@@ -23,9 +21,10 @@
         }
     }
     let nhietDo = new Temperature();
-    nhietDo.setDoC(25);
+    nhietDo.setDoC(parseFloat(prompt('Nhập độ C muốn chuyển đổi!')));
     alert('Độ F sau khi chuyển đổi là:' + nhietDo.getDoF());
-    alert('Độ F sau khi chuyển đổi là:' + nhietDo.getDoK());
+    alert('Độ K sau khi chuyển đổi là:' + nhietDo.getDoK());
+
 
 </script>
 </body>
