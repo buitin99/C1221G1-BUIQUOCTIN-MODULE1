@@ -7,22 +7,24 @@
 <body>
 <script>
     class Apple{
-        constructor(weight) {
-            this.weight = weight;
+        constructor() {
+            this.weight = 10;
         }
 
         decrease() {
-            if (this.weight > 0) {
                 this.weight--;
-            }
-            else
-            {
-                console.log('Hết táo rồi!');
-            }
         }
 
         getWeight(){
             return this.weight;
+        }
+        isEmpty(){
+            if(this.weight == 0){
+                return true;
+            }
+            else{
+                return false;
+            }
         }
 
 
@@ -34,6 +36,24 @@
             this.gender = gender;
             this.weight = weight;
         }
+        isMale(){
+            if(this.gender == "male"){
+                return true;
+            }else
+            {
+                return false;
+            }
+        }
+        checkApple(tao){
+            if(tao.isEmpty()){
+                this.say("Hết táo!");
+                return false;
+            }else
+            {
+                this.say("Còn táo!");
+                return true;
+            }
+        }
         setGender(gender){
             this.gender = gender;
         }
@@ -41,14 +61,14 @@
             return this.gender;
         }
 
-        eat(){
-            this.weight++
+        eat(tao){
+            if(this.checkApple(tao)){
+                tao.decrease();
+                this.weight++;
+            }
         }
-        say(){
-            console.log('Ăn táo đê!');
-        }
-        say1(){
-            console.log('Ok!');
+        say(text){
+            console.log(this.name + ": " + text);
         }
         getName(){
             return this.name;
@@ -67,46 +87,18 @@
     let human1 = new Human("Adam","male",55);
     let human2 = new Human("Eva", "female", 45);
     let tao = new Apple(10);
-    console.log(human1);
-    console.log(human2);
-    console.log(tao);
-    console.log(human1.name);
-    human1.say();
-    console.log(human2.name);
-    human2.say1();
-    console.log(human1.name);
-    human1.eat();
-    console.log(human1.weight);
-    tao.decrease();
-    console.log(tao.weight);
-    console.log(human2.name);
-    human2.eat();
-    console.log(human2.weight);
-    tao.decrease();
-    console.log(tao.weight);
-    human1.eat();
-    tao.decrease();
-    human2.eat();
-    tao.decrease();
-    human1.eat();
-    tao.decrease();
-    human2.eat();
-    tao.decrease();
-    human2.eat();
-    tao.decrease();
-    human1.eat();
-    tao.decrease();
-    human2.eat();
-    tao.decrease();
-    console.log(tao.weight);
-    human2.eat();
-    tao.decrease();
-    tao.decrease();
-    console.log(human1.name);
-    console.log(human1.weight);
-    console.log(human2.name);
-    console.log(human2.weight);
 
+    human1.say("Eva em ăn táo đi");
+    human2.say("Cảm ơn anh Adam");
+    human2.eat(tao);
+    human2.say("E ăn rồi, anh ăn đi");
+    human1.say("OK");
+    human1.eat(tao);
+    human1.eat(tao);
+    human1.eat(tao);
+    console.log("Trọng lượng của táo :" + tao.weight);
+    console.log("Trọng lượng của eva :" + human2.weight);
+    console.log("Trọng lượng của adam :" + human1.weight);
 
 
 

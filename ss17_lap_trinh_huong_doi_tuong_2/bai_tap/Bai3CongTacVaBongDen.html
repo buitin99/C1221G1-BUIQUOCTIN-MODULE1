@@ -7,64 +7,48 @@
 <body>
 <script>
     class SwitchButton{
-        constructor(status,lamp) {
-            this.status = status;
-            this.lamp = lamp;
+        constructor() {
+            this.status = false;
+            this.lamp = null;
         }
-        getStatus() {
-            return this.status;
-        }
-
-        setStatus(status) {
-            this.status = status;
-        }
-
-        getLamp() {
-            return this.lamp;
-        }
-
-        setLamp(lamp) {
-            this.lamp = lamp;
-        }
-
-        connectToLamp(){
-            if(this.status == true){
-                console.log('Đã kết nối với bóng đèn!');
-            }
-            else
-            {
-                console.log('Đã ngắt kết nối với bóng đèn!');
-            }
+        connectToLamp(bongDen){
+          this.lamp = bongDen;
         }
         switchOff(){
-            this.status = false;
+            if(this.status){
+                this.status = false;
+                this.lamp.turnOff();
+            }
         }
         switchOn(){
+            if(!this.status){
+                this.status = true;
+                this.lamp.turnOn();
+            }
+        }
+    }
+    class ElectricLamp{
+        constructor() {
+            this.status = false;
+        }
+
+
+        turnOff(){
+            this.status = false;
+        }
+        turnOn(){
             this.status = true;
         }
     }
-    class ElectricLamp extends SwitchButton{
-        constructor(status) {
-            super(status);
-        }
-        turnOff(){
-            console.log('Bóng đèn tắt!');
-        }
-        turnOn(){
-            console.log('Bóng đèn bật!');
-        }
-    }
-    let bongDen = new ElectricLamp();
     let congTac = new SwitchButton();
+    let den = new ElectricLamp();
+    console.log("trang thái công tắc " + congTac.status);
+    console.log("trang thái bóng đen " + den.status);
+    console.log("kết nối với bóng đèn")
+    congTac.connectToLamp(den);
     congTac.switchOn();
-    console.log(congTac.status);
-    congTac.connectToLamp();
-    bongDen.turnOn();
-    congTac.switchOff();
-    console.log(congTac.status);
-    congTac.connectToLamp();
-    bongDen.turnOff();
-
+    console.log("trang thái công tắc " + congTac.status);
+    console.log("trang thái bóng đen " + den.status);
 
 </script>
 </body>
