@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinhThue(luongTruocThue,luongSauThue){
+        luongTruocThue = parseFloat(prompt('Nhập số tiền lương của nhân viên:'));
+        if( luongTruocThue >= 15){
+            luongSauThue = luongTruocThue*0.8;
+        }else if(luongTruocThue >= 7){
+            luongSauThue = luongTruocThue*0.9;
+        }else
+        {
+            luongSauThue = luongTruocThue*0.95;
+        }
+        return luongSauThue;
+    }
+    alert('Số tiền lương sau khi tính thuế là' + tinhThue());
+</script>
+</body>
+</html>

@@ -5,13 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-
 <script>
-    var str = prompt('Nhập:');
-    var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var LOWER = 'abcdefghijklmnopqrstuvwxyz';
-    var result = [];
-    for (var x = 0; x < str.length; x++) {
+    let str = prompt('Nhập:');
+    // let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    // let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    // let result = [];
+    for (let x = 0; x < str.length; x++) {
         if (UPPER.indexOf(str[x]) !== -1) {
             result.push(str[x].toLowerCase());
         }
@@ -23,6 +22,14 @@
         }
     }
     document.write(result.join(''));
+
+    let nhapChuoi = prompt("nhập chuỗi:");
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+    for (let i = 0; i < nhapChuoi.length; i++){
+        if()
+    }
 </script>
 </body>
 </html>

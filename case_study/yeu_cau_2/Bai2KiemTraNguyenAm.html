@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //if
+    // function kiemTra(kyTu) {
+    //     kyTu = prompt('Nhập ký tự tiếng anh cần kiểm tra:');
+    //     if ((kyTu =='o') || (kyTu =='u') || (kyTu =='i') || (kyTu =='a') || (kyTu =='e') )
+    //     {
+    //         alert('ký tự bạn kiểm tra là một nguyên âm!');
+    //     }else
+    //     {
+    //         alert('ký tự bạn kiểm tra không phải là một nguyên âm!');
+    //     }
+    // }
+    //kiemTra();
+
+    //switch case
+    let kyTu = prompt('Nhập ký tự tiếng anh cần kiểm tra:');
+    let flag = false;
+    let u = 'u'; let a = 'a';
+    let o = 'o'; let e = 'e';
+    let i = 'i';
+    switch (kyTu) {
+        case u :
+        {
+            flag = true;
+            break;
+        }
+        case o :
+        {
+            flag = true;
+            break;
+        }
+        case i :
+        {
+            flag = true;
+            break;
+        }
+        case a :
+        {
+            flag = true;
+            break;
+        }
+        case e :
+        {
+            flag = true;
+            break;
+        }
+    }
+    if (flag){
+        alert('ký tự bạn kiểm tra là một nguyên âm!');
+    }else
+    {
+        alert('ký tự bạn kiểm tra không phải là một nguyên âm!');
+    }
+
+</script>
+</body>
+</html>
