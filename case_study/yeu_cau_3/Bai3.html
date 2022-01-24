@@ -8,29 +8,17 @@
 <script>
     let numerators = [5, 2, 5];
     let denominators = [6, 3, 4];
+    let count = 0;
+    let max = (numerators [0] / denominators [0]);
 
-    for (let i = 0; i < 3; i++) {
-        let max = (numerators[0] / denominators[0]);
-        if ((numerators[i + 1] / denominators[i + 1]) < (numerators[i + 2] / denominators[i + 2])) {
-            if (max < (numerators[i + 2]/denominators[i + 2])){
-                alert('phân số lớn nhất ở vị trí' + i+2);
-                break;
-            }else
-            {
-                alert('phân số lớn nhất ở vị trí' + i);
-                break;
-            }
-        }else
-            if (max < (numerators[i + 1]/denominators[i + 1])){
-                alert('phân số lớn nhất ở vị trí' + i+1);
-                break;
-            }
-            else
-            {
-                alert('phân số lớn nhất ở vị trí' + i);
-                break;
-            }
+    for (let i = 0; i < numerators.length; i++) {
+        if (max < numerators [i] / denominators[i]) {
+            max = numerators[i] / denominators[i];
+            count = i;
+        }
     }
+    alert('Số lớn nhất ở vị trí' + count);
+
 </script>
 </body>
 </html>

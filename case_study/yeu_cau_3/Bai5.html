@@ -8,42 +8,46 @@
 <script>
     let nhapSo;
     let soLuong;
+    let tongTien = 0;
+    let flag = false;
     do {
-      nhapSo =  parseInt(prompt('Nhập số để chọn thức uống!'));
-    }while (nhapSo >=8);
-    if(nhapSo == 7){
-        alert('Cảm ơn đã ủng hộ!');
-    }else
-    {
-        soLuong = parseInt(prompt('nhập số lượng'));
-        switch (nhapSo) {
-            case 1:
-            {
-                alert(soLuong + 'Cafe có giá' + soLuong*15);
-                break;
+        nhapSo = parseInt(prompt("1.Cafe" + "\n" + "2.Cam vắt" + "\n" + "3.Nước ép cà rốt " + "\n" + "4.Nước ép cà chua" + "\n" + "5.Nước lọc" + "\n" + "6.Nước dừa" + "\n" + "7.Thoát"));
+        while (nhapSo < 7) {
+            soLuong = parseInt(prompt('nhập số lượng'));
+            switch (nhapSo) {
+                case 1: {
+                    tongTien += soLuong * 15;
+                    break;
+                }
+                case 2: {
+                    tongTien += soLuong * 20;
+                    break;
+                }
+                case 3: {
+                    tongTien += soLuong * 25;
+                    break;
+                }
+                case 4: {
+                    tongTien += soLuong * 30;
+                    break;
+                }
+                case 5: {
+                    tongTien += soLuong * 5;
+                    break;
+                }
+                case 6: {
+                    tongTien += soLuong * 40;
+                    break;
+                }
             }
-            case 2:
-            {
-                alert(soLuong + 'Cam vắt có giá' + soLuong*20);
-                break;
-            }
-            case 3:
-            {
-                alert(soLuong + 'Nước ép cà rốt có giá' + soLuong*25);
-                break;
-            }
-            case 5:
-            {
-                alert(soLuong + 'Nước lọc' + soLuong*5);
-                break;
-            }
-            case 6:
-            {
-                alert(soLuong + 'Nước dừa có giá' + soLuong*30);
-                break;
-            }
+            break;
+        }
+    } while (nhapSo !== 7);
+    flag = true;
+    if (flag == true) {
+        alert('Tổng số tiền phải trả là: ' + tongTien + ' Nghìn VND');
     }
-    }
+
 </script>
 </body>
 </html>

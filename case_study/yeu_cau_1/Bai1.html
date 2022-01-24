@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    document.write('<table border="0">');
+    for (let i = 0; i < 4; i++) {
+        document.write('<tr>');
+        if (i == 0 || i == 3) {
+            for (let j = 0; j < 5; j++) {
+                document.write('<td>');
+                document.write("*");
+                document.write('</td>');
+            }
+        } else {
+            document.write('<td>');
+            document.write("*");
+            document.write('</td>');
+
+            for (let k = 0; k < 3; k++) {
+                document.write('<td>');
+                document.write("&nbsp");
+                document.write('</td>');
+            }
+            document.write('<td>');
+            document.write("*");
+            document.write('</td>');
+        }
+        document.write('</tr>');
+    }
+    document.write('</table>');
+</script>
+</body>
+</html>

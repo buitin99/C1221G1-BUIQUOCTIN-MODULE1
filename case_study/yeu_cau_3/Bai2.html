@@ -6,24 +6,23 @@
 </head>
 <body>
 <script>
-    let A = [7,2,5,3,5,3];
-    let array = [7,2,5,4,6,3,5,3];
-
+    let A = [7, 2, 5, 3, 5, 3];
+    let B = [7, 2, 5, 4, 6, 3, 5, 3];
     let C = [];
-    array.substr(3,1);
-    // for(let i = 0; i < B.length; i++)
-    // {
-    //     if(A[i] == B[i]){
-    //
-    //     }
-    //         else
-    //     {
-    //         C.push(B[i]);
-    //         // B.slice(3,1);
-    //     }
-    // }
-    // console.log(C);
-    console.log(array);
+
+    for (let i = 0; i < B.length ; i++) {
+        let flag = true;
+        for (let j = 0; j < A.length; j++) {
+            if(A[j] ===  B[i]) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            C.push(B[i])
+        }
+    }
+    alert(C);
 </script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhap1 = prompt();
+    let nhap2 = prompt();
+    function unique(nhap) {
+        return Array.from(new Set(nhap));
+    }
+    let chuoiMoi1 = unique(nhap1);
+    let chuoiMoi2 = unique(nhap2);
+
+    for (let i = 0; i < chuoiMoi1.length; i++){
+        for (let j = 0; j < chuoiMoi2.length; j++){
+            if (chuoiMoi1[i] == chuoiMoi2[j]){
+                document.write(chuoiMoi1[i]);
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

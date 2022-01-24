@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let m = parseInt(prompt('số hàng'));
+    let n = parseInt(prompt('số cột'));
+    let result = 0;
+    let count = 0;
+
+    function soNguyenTo(so) {
+        if (so <= 1) {
+            return false;
+        }
+        for (let i = 2; i < so; i++) {
+            if (so % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    for (let i = 0; i < m; i++) {
+        array[i] = [m];
+        for (let j = 0; j < n; j++) {
+            array[i][j] = parseInt(prompt(''));
+            if (soNguyenTo(array[i][j])) {
+                count++;
+            }
+        }
+
+    }
+    document.write('Tổng số nguyên tố có trong mảng là' + count);
+
+</script>
+</body>
+</html>

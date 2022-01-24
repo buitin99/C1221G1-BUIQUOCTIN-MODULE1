@@ -5,21 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-    <script>
-        let a = [1,2,3,4,5];
-        let b = new Array(a.length);
+<script>
+    let a = [1, 2, 3, 4, 5];
+    let b = new Array(a.length);
 
-        for (let i = 0; i < a.length ;i++){
-           if (i == 0){
-               b[i] = a[i];
-           }
-           else
-           {
-             a[i] += a[i-1];
-             b[i] = a[i]
-           }
+    for (let i = 0; i < a.length; i++) {
+        if (i == 0) {
+            b[i] = a[i];
+        } else {
+            a[i] += a[i-1];
+            b[i] = a[i]
         }
-        document.write(b);
-    </script>
+    }
+    document.write(b);
+</script>
 </body>
 </html>

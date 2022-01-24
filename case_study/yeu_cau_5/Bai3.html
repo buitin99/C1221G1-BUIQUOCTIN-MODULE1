@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let m = parseInt(prompt('số hàng'));
+    let n = parseInt(prompt('số cột'));
+    let result = 0;
+    for (let i = 0; i < m; i++){
+        array[i] = [m];
+        for (let j = 0 ; j < n ; j++ ){
+            array[i][j] = parseInt(prompt(''));
+        }
+    }
+
+    function minMax(so) {
+        let min = max = array[0][0];
+        // let min = array[0][0];
+        for (let i = 0;i < so.length ;i++){
+            for (let j = 0; j < so[i].length; j++){
+                if (max < array[i][j]){
+                    max = array[i][j];
+                }
+                if (min > array[i][j]){
+                    min = array[i][j];
+                }
+            }
+        }
+        return document.write('Giá trị lớn nhất là:' + max + 'Giá trị bé nhất là' + min);
+    }
+    minMax(array);
+
+</script>
+</body>
+</html>

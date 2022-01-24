@@ -6,30 +6,39 @@
 </head>
 <body>
 <script>
-    let str = prompt('Nhập:');
-    // let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    // let LOWER = 'abcdefghijklmnopqrstuvwxyz';
-    // let result = [];
-    for (let x = 0; x < str.length; x++) {
-        if (UPPER.indexOf(str[x]) !== -1) {
-            result.push(str[x].toLowerCase());
-        }
-        else if (LOWER.indexOf(str[x]) !== -1) {
-            result.push(str[x].toUpperCase());
-        }
-        else {
-            result.push(str[x]);
-        }
-    }
-    document.write(result.join(''));
 
-    let nhapChuoi = prompt("nhập chuỗi:");
-    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
-    let result = [];
-    for (let i = 0; i < nhapChuoi.length; i++){
-        if()
+    function doiTen(nhap) {
+        let chuyenDoi = [];
+        let chuyenDoi1 = [];
+        chuyenDoi = nhap.toLocaleLowerCase().trim().replace(/\s+/g, ' ');
+        chuyenDoi1 = chuyenDoi.toLocaleLowerCase().replace(/\w\S*/g, w => w.replace(/^\w/, l => l.toUpperCase()));
+        return chuyenDoi1;
     }
+
+
+    function doDai(result) {
+       let word = null;
+       let str = result.split(" ");
+       let max = 0;
+       for (let i = 0; i < str.length; i++){
+           if(max < str[i].length){
+               max = str[i].length;
+               word = str[i];
+           }
+       }
+       return  word;
+    }
+    function main() {
+        let nhapKyTu = prompt();
+        let ketQua1 = doiTen(nhapKyTu);
+        let ketQua2 = doDai(ketQua1);
+        alert(nhapKyTu);
+        alert(ketQua1);
+        alert(ketQua2);
+
+    }
+    main();
+
 </script>
 </body>
 </html>
