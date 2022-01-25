@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let cao = parseInt(prompt());
+    document.write('<table border="0">');
+    for (let i = 1; i <= cao ; i++){
+        document.write('<tr>');
+        for(let k = cao; k >= i; k--)
+        {
+            document.write('<td>');
+            document.write("&nbsp");
+            document.write('</td>');
+        }
+        for (let j = 1 ; j <= i*2-1;j++) {
+                document.write('<td>');
+                document.write('*');
+                document.write('</td>');
+
+        }
+        document.write('</tr>');
+    }
+    document.write('</table>');
+    document.write("<br>");
+
+
+</script>
+
+</body>
+</html>
