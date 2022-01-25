@@ -5,10 +5,57 @@
     <title>Title</title>
 </head>
 <body>
-
+<button onclick="ngauNhien()">Ngẫu nhiên</button>
+<button onclick="tuChon()">Tự chọn</button>
 <script>
 
+    class VeSo{
+        constructor(tc, nn) {
+            this.tc = tc;
+            this.nn = nn;
+        }
 
+        getTc() {
+            return this.tc;
+        }
+
+        setTc(newTc) {
+            this.Tc = Tc;
+        }
+
+        getNn() {
+            return this.nn;
+        }
+
+        setNn(newNn) {
+            this.nn = newNn;
+        }
+        veTrungThuong(trungThuong){
+            trungThuong = [];
+            for (let i = 0; i < 6 ;i++) {
+                trungThuong[i] = Math.floor(Math.random() * 100);
+            }
+
+        }
+        soSanh(){
+
+        }
+    }
+   function ngauNhien(soNgaunhien)
+    {
+        soNgaunhien = [];
+        for (let i = 0; i < 6 ;i++) {
+            soNgaunhien[i] = Math.floor(Math.random() * 100);
+        }
+    }
+    function tuChon(soTuChon) {
+        soTuChon = [];
+        for (let i = 0; i < 6 ;i++) {
+            soTuChon[i] = parseInt(prompt('Nhập số ' +(i+1)));
+        }
+        alert(soTuChon);
+        return soTuChon;
+    }
 
 </script>
 </body>
