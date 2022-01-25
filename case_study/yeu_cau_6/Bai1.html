@@ -5,57 +5,54 @@
     <title>Title</title>
 </head>
 <body>
-<button onclick="ngauNhien()">Ngẫu nhiên</button>
-<button onclick="tuChon()">Tự chọn</button>
+<!--<button onclick="ngauNhien()">Ngẫu nhiên</button>-->
+<!--<button onclick="tuChon()">Tự chọn</button>-->
+<!--<button onclick="ketQua()">Kết Quả</button>-->
+<button onclick="chonSo()">Play</button>
+<button onclick="trungThuong()">Kiểm Tra Kết Quả</button>
 <script>
 
     class VeSo{
-        constructor(tc, nn) {
-            this.tc = tc;
-            this.nn = nn;
+        constructor(so) {
+            this.so = so;
         }
 
-        getTc() {
-            return this.tc;
+        getSo() {
+            return this.so;
         }
 
-        setTc(newTc) {
-            this.Tc = Tc;
-        }
-
-        getNn() {
-            return this.nn;
-        }
-
-        setNn(newNn) {
-            this.nn = newNn;
-        }
-        veTrungThuong(trungThuong){
-            trungThuong = [];
-            for (let i = 0; i < 6 ;i++) {
-                trungThuong[i] = Math.floor(Math.random() * 100);
-            }
-
-        }
-        soSanh(){
-
+        setSo(so) {
+            this.so = so;
         }
     }
-   function ngauNhien(soNgaunhien)
-    {
-        soNgaunhien = [];
-        for (let i = 0; i < 6 ;i++) {
-            soNgaunhien[i] = Math.floor(Math.random() * 100);
-        }
-    }
-    function tuChon(soTuChon) {
-        soTuChon = [];
-        for (let i = 0; i < 6 ;i++) {
-            soTuChon[i] = parseInt(prompt('Nhập số ' +(i+1)));
-        }
-        alert(soTuChon);
-        return soTuChon;
-    }
+   function chonSo(veMua) {
+       veMua = []
+       let nhap = parseInt(prompt('1.Số ngẫu nhiên' + '\n' + '2.Số tự chọn'));
+       if (nhap == 1) {
+           for (let i = 0; i < 6; i++) {
+               veMua[i] = Math.floor(Math.random() * 100);
+           }
+           alert('Dãy số ngẫu nhiên là' + veMua);
+       } else {
+
+           for (let i = 0; i < 6; i++) {
+               veMua[i] = parseInt(prompt('Nhập số ' + (i + 1)));
+           }
+           alert('Dãy số bạn chọn là' + veMua);
+
+       }
+       return veMua;
+   }
+   function trungThuong(trungSo) {
+        trungSo = [];
+       for (let i = 0; i < 6; i++) {
+           trungSo[i] = Math.floor(Math.random() * 100);
+       }
+       alert(trungSo);
+       return trungSo;
+   }
+
+
 
 </script>
 </body>
