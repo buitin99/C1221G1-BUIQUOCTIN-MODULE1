@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function vietTac(word) {
+        word = word.trim().toUpperCase();
+        let wordArray = Array.from(word);
+        let ketQua = [];
+        for (let i = 0; i < wordArray.length - 1; i++) {
+            if (wordArray[i] === " " && wordArray[i + 1] === " ") {
+                for (let j = i + 1; j < wordArray.length - 1; j++) {
+                    wordArray[j] = wordArray[j + 1];
+                }
+                i--;
+                wordArray.pop();
+            }
+        }
+
+        ketQua[0] = wordArray[0];
+        for (let i = 0; i < wordArray.length - 1; i++) {
+            if (wordArray[i] === " ") {
+                ketQua[i] = wordArray[i + 1];
+            }
+        }
+        if(ketQua.length == 1){
+            alert("Từ bạn nhập có 1 ký tự!");
+        }
+        else {
+            return ketQua.join("");
+        }
+    }
+
+    let word = prompt();
+    alert(vietTac(word));
+
+</script>
+</body>
+</html>

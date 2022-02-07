@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let so = parseInt(prompt('nhập số phần tử trong mảng!'));
+    let nhapSo = [];
+    let mangMoi = [];
+    let tong = 0;
+    let trungBinh = 0;
+
+    for (let i = 0; i < so; i++) {
+        nhapSo[i] = parseInt(prompt('nhập phần tử thứ' + (i + 1)));
+    }
+    for (let j = 0; j < so; j++) {
+        if (nhapSo[j] > 50) {
+            nhapSo.push(nhapSo[j]);
+            nhapSo.splice(j, 1);
+            nhapSo.pop();
+        }
+        if ( j%3 == 0 && nhapSo[j] % 5 == 0) {
+            mangMoi.push(nhapSo[j]);
+        }
+    }
+    alert(mangMoi);
+    for (let k = 0; k < mangMoi.length; k++){
+       tong += mangMoi[k];
+    }
+    trungBinh = tong/mangMoi.length;
+    alert(trungBinh);
+
+</script>
+</body>
+</html>

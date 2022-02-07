@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+     function timSo(array) {
+         array = [1, 5, 6, 13, 9, 12, 8, 0, 5, 1];
+         array.sort(function (x, y) {
+             return x - y;
+         });
+         let f0 = 0, f1 = 1, fn;
+         let arrayFibonaci = [];
+         let arrayResult = [];
+         arrayFibonaci.push(f0);
+         arrayFibonaci.push(f1);
+         for (let i = 2; i < array.length; i++) {
+             fn = f0 + f1;
+             f0 = f1;
+             f1 = fn;
+             arrayFibonaci.push(fn);
+         }
+         console.log(arrayFibonaci);
+         console.log(array);
+         for (let i = 0; i < array.length; i++){
+             if (arrayFibonaci.indexOf(array[i],i)!= -1){
+                 arrayResult.push(array[i])
+             }
+         }
+         console.log(arrayResult);
+         return arrayResult;
+     }
+     let ketQua = timSo();
+     alert(ketQua);
+
+
+
+</script>
+</body>
+</html>

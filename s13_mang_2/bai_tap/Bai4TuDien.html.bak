@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let word = prompt("nhập từ tiếng anh cần tra:");
+
+    let tiengViet = ["sáng", "trưa", "chiều", "tối"];
+    let tiengAnh = ["morrning", "afternoon", "everning", "night"];
+
+    for (let i = 0; i < tiengAnh.length; i++){
+        if (word[i] == tiengAnh[i]){
+            alert("tiếng việt là:" + tiengViet[i] );
+            break;
+        }
+        else
+        {
+            alert("không tìm thấy từ cần tìm kiếm!");
+            break;
+        }
+    }
+</script>
+</body>
+</html>
