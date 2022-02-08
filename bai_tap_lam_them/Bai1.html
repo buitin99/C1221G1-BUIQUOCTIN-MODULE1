@@ -21,15 +21,15 @@
             nhapSo.splice(j, 1);
             nhapSo.pop();
         }
-        if ( j%3 == 0 && nhapSo[j] % 5 == 0) {
+        if (j % 3 == 0 && nhapSo[j] % 5 == 0) {
             mangMoi.push(nhapSo[j]);
         }
     }
     alert(mangMoi);
-    for (let k = 0; k < mangMoi.length; k++){
-       tong += mangMoi[k];
+    for (let k = 0; k < mangMoi.length; k++) {
+        tong += mangMoi[k];
     }
-    trungBinh = tong/mangMoi.length;
+    trungBinh = tong / mangMoi.length;
     alert(trungBinh);
 
 </script>

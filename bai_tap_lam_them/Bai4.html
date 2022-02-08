@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class LopNganHang {
+       constructor(maTaiKhoan, chuTaiKhoan, tenNganHang, tienLai) {
+           this.maTaiKhoan = maTaiKhoan;
+           this.chuTaiKhoan = chuTaiKhoan;
+           this.tienLai = tienLai;
+           this.tenNganHang = tenNganHang;
+       }
+
+
+
+        setMaTaiKhoan(soTaiKhoan) {
+            this.maTaiKhoan = soTaiKhoan;
+        }
+
+        getMaTaiKhoan() {
+            return this.maTaiKhoan;
+        }
+
+
+        setTenNganHang(nganHang) {
+            this.tenNganHang = nganHang;
+        }
+
+        getTenNganHang() {
+            return this.tenNganHang;
+        }
+
+        setChuTaiKhoan(tenTaiKhoan) {
+            this.chuTaiKhoan = tenTaiKhoan;
+        }
+
+        getChuTaiKhoan() {
+            return this.chuTaiKhoan;
+        }
+
+        setTienLai(lai) {
+            this.tienLai = lai;
+        }
+
+        getTienLai() {
+            return this.tienLai;
+        }
+        getNumber(){
+           return [this.maTaiKhoan, this.chuTaiKhoan, this.tenNganHang, this.tienLai];
+        }
+        getInfo(){
+           return "thông tin tài khoản" + this.getNumber().join(" ");
+        }
+    }
+    
+
+</script>
+</body>
+</html>
