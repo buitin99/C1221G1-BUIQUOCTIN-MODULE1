@@ -5,41 +5,52 @@
     <title>Title</title>
 </head>
 <body>
-
 <script>
+    let so = parseInt(prompt("Nhập số phần tử trong mảng:"));
+    let arrNhap = new Array(so);
+    for (let i = 0; i < so; i++) {
+        arrNhap[i] = parseInt(prompt("nhập phần tử thứ" + (i + 1) + "của mảng"));
+    }
+    console.log(arrNhap);
 
-     function timSo(array) {
-         array = [1, 5, 6, 13, 9, 12, 8, 0, 5, 1];
-         array.sort(function (x, y) {
-             return x - y;
-         });
-         let f0 = 0, f1 = 1, fn;
-         let arrayFibonaci = [];
-         let arrayResult = [];
-         arrayFibonaci.push(f0);
-         arrayFibonaci.push(f1);
-         for (let i = 2; i < array.length; i++) {
-             fn = f0 + f1;
-             f0 = f1;
-             f1 = fn;
-             arrayFibonaci.push(fn);
-         }
-         console.log(arrayFibonaci);
-         console.log(array);
-         for (let i = 0; i < array.length; i++){
-             if (arrayFibonaci.indexOf(array[i]) != -1){
-                 arrayResult.push(array[i])
-             }
-         }
-         document.write("Dãy số fibonaci là:" + arrayFibonaci);
-         return arrayResult;
+    function soFibonaci(number) {
+        let f0 = 0;
+        let f1 = 1;
+        let fn = 0;
+        let arrFibo = [];
 
-     }
-     let ketQua = timSo();
-     alert(ketQua);
+        for (let i = 0; i < number; i++) {
+            fn = f0 + f1;
+            f0 = f1;
+            f1 = fn;
+            arrFibo.push(fn);
+        }
 
+        for (let i = 0; i < arrFibo.length; i++) {
+            if (number == arrFibo[i]) {
+                return number;
+            }
+        }
+    }
 
+    function timSofibonaci(arr) {
+        let newArr = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            if (soFibonaci(arr[i])) {
+                newArr.push(arr[i]);
+            }
+        }
+        newArr.sort(function (a, b) {
+            return a - b;
+        });
+        return newArr;
+    }
+
+    alert("Mảng sau khi kiểm tra là:" + timSofibonaci(arrNhap));
 
 </script>
+
+
 </body>
 </html>

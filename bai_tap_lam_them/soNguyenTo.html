@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let so = parseInt(prompt("Nhập số phần tử của mảng!"));
+    let arrNhap = [];
+    for (let i = 0; i < so; i++) {
+        arrNhap[i] = parseInt(prompt("nhập phần tử thứ " + (i + 1) + " của mảng"));
+    }
+    console.log(arrNhap);
+
+    function soNguyenTo(arr) {
+        let newArr = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (kiemTraSoNguyenTo(arr[i])) {
+                newArr.push(arr[i]);
+            }
+        }
+        newArr.sort(function (a, b) {
+            return a - b;
+        });
+        for (let i = 0; i < newArr.length; i++) {
+            if (newArr[i] == newArr[i + 1]) {
+                newArr.splice(i, 1);
+                i--;
+            }
+        }
+        return newArr;
+    }
+
+    function kiemTraSoNguyenTo(number) {
+        if (number < 2) {
+            return false;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+            return number;
+        }
+    }
+
+    console.log(soNguyenTo(arrNhap));
+
+
+</script>
+
+</body>
+</html>

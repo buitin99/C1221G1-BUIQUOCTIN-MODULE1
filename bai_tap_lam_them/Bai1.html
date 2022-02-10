@@ -7,29 +7,24 @@
 <body>
 <script>
     let so = parseInt(prompt('nhập số phần tử trong mảng!'));
-    let nhapSo = [];
+    let mang = new Array(so);
     let mangMoi = [];
     let tong = 0;
     let trungBinh = 0;
+    let count = 0;
 
-    for (let i = 0; i < so; i++) {
-        nhapSo[i] = parseInt(prompt('nhập phần tử thứ' + (i + 1)));
+    for (let i = 0; i < mang.length; i++) {
+        mang[i] = parseInt(prompt('nhập phần tử thứ' + (i + 1)));
     }
-    for (let j = 0; j < so; j++) {
-        if (nhapSo[j] > 50) {
-            nhapSo.push(nhapSo[j]);
-            nhapSo.splice(j, 1);
-            nhapSo.pop();
-        }
-        if (j % 3 == 0 && nhapSo[j] % 5 == 0) {
-            mangMoi.push(nhapSo[j]);
+    document.write("Mảng vừa nhập vào là: \n");
+    for (let j = 0; j < mang.length; j++) {
+        document.write(mang[j] + " ");
+        if (j % 3 == 0 && mang[j] % 5 == 0) {
+            tong += mang[j];
+            count++;
         }
     }
-    alert(mangMoi);
-    for (let k = 0; k < mangMoi.length; k++) {
-        tong += mangMoi[k];
-    }
-    trungBinh = tong / mangMoi.length;
+    trungBinh = tong / count;
     alert(trungBinh);
 
 </script>
